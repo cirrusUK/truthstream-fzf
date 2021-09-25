@@ -1,0 +1,4 @@
+#!/bin/sh
+
+url=$(cat "$HOME"/Documents/truthstream.txt | cut -c 53-  | shuf | fzf -m --ansi )
+mpv --script=/home/cirrus/.config/mpv/scripts/mynotify.lua --no-osd-bar --ontop "http://144.217.177.36:4742/Series/Truthstream Media/${url}"  
